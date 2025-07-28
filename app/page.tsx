@@ -41,7 +41,6 @@ import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/
 import { Facility3D } from "../components/facility-3d"
 import { RecommendedActions } from "../components/recommended-actions"
 import { AutomatedPlan } from "../components/automated-plan"
-import { IncidentHistory } from "../components/incident-history"
 
 // California locations with real coordinates and climate data
 const CALIFORNIA_LOCATIONS = {
@@ -211,8 +210,8 @@ export default function CaliforniaHeatwaveDemo() {
         <div className="flex items-center gap-2">
           <Flame className="w-6 h-6 text-red-600" />
           <div>
-            <h2 className="font-semibold">Climate Adaptive</h2>
-            <p className="text-sm text-muted-foreground">Infrastructure Management</p>
+            <h2 className="font-semibold">CA Heatwave Center</h2>
+            <p className="text-sm text-muted-foreground">Heat Risk Management</p>
           </div>
         </div>
       </SidebarHeader>
@@ -367,7 +366,7 @@ export default function CaliforniaHeatwaveDemo() {
             <div className="flex items-center gap-4">
               <SidebarTrigger />
               <div>
-                <h1 className="text-3xl font-bold">Climate Adaptive Data Centers Infrastructure Management System</h1>
+                <h1 className="text-3xl font-bold">California Heatwave Data Center Management</h1>
                 <p className="text-muted-foreground">Real-time heat risk monitoring and automated response planning</p>
               </div>
             </div>
@@ -445,14 +444,13 @@ export default function CaliforniaHeatwaveDemo() {
           </div>
 
           <Tabs defaultValue="overview" className="space-y-4">
-            <TabsList className="grid w-full grid-cols-7">
+            <TabsList className="grid w-full grid-cols-6">
               <TabsTrigger value="overview">Overview</TabsTrigger>
               <TabsTrigger value="historical">Historical Data</TabsTrigger>
               <TabsTrigger value="actions">Recommended Actions</TabsTrigger>
               <TabsTrigger value="automated">Automated Plan</TabsTrigger>
               <TabsTrigger value="facility">3D Facility</TabsTrigger>
               <TabsTrigger value="datacenters">Data Centers</TabsTrigger>
-              <TabsTrigger value="incidents">Incident History</TabsTrigger>
             </TabsList>
 
             <TabsContent value="overview" className="space-y-4">
@@ -1044,10 +1042,6 @@ export default function CaliforniaHeatwaveDemo() {
                   </div>
                 </CardContent>
               </Card>
-            </TabsContent>
-
-            <TabsContent value="incidents" className="space-y-4">
-              <IncidentHistory simulation={simulation} location={currentLocation} />
             </TabsContent>
           </Tabs>
         </main>
