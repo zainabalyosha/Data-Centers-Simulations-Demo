@@ -41,6 +41,7 @@ import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/
 import { Facility3D } from "../components/facility-3d"
 import { RecommendedActions } from "../components/recommended-actions"
 import { AutomatedPlan } from "../components/automated-plan"
+import { IncidentHistory } from "../components/incident-history"
 
 // California locations with real coordinates and climate data
 const CALIFORNIA_LOCATIONS = {
@@ -444,13 +445,14 @@ export default function CaliforniaHeatwaveDemo() {
           </div>
 
           <Tabs defaultValue="overview" className="space-y-4">
-            <TabsList className="grid w-full grid-cols-6">
+            <TabsList className="grid w-full grid-cols-7">
               <TabsTrigger value="overview">Overview</TabsTrigger>
               <TabsTrigger value="historical">Historical Data</TabsTrigger>
               <TabsTrigger value="actions">Recommended Actions</TabsTrigger>
               <TabsTrigger value="automated">Automated Plan</TabsTrigger>
               <TabsTrigger value="facility">3D Facility</TabsTrigger>
               <TabsTrigger value="datacenters">Data Centers</TabsTrigger>
+              <TabsTrigger value="incidents">Incident History</TabsTrigger>
             </TabsList>
 
             <TabsContent value="overview" className="space-y-4">
@@ -1042,6 +1044,10 @@ export default function CaliforniaHeatwaveDemo() {
                   </div>
                 </CardContent>
               </Card>
+            </TabsContent>
+
+            <TabsContent value="incidents" className="space-y-4">
+              <IncidentHistory simulation={simulation} location={currentLocation} />
             </TabsContent>
           </Tabs>
         </main>
