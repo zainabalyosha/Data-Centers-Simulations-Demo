@@ -1049,3 +1049,18 @@ export default function CaliforniaHeatwaveDemo() {
     </SidebarProvider>
   )
 }
+import OutageEventsSection from "@/components/outage-events-section"
+
+export default function Page() {
+  return (
+    <main className="container mx-auto py-10">
+      <div className="space-y-8">
+        {/* Your existing components */}
+
+        <OutageEventsSection />
+
+        {/* Any other existing components */}
+      </div>
+    </main>
+  )
+}
