@@ -366,7 +366,7 @@ export default function CaliforniaHeatwaveDemo() {
             <div className="flex items-center gap-4">
               <SidebarTrigger />
               <div>
-                <h1 className="text-3xl font-bold">California Heatwave Data Center Management</h1>
+                <h1 className="text-3xl font-bold"> Data Center Control System</h1>
                 <p className="text-muted-foreground">Real-time heat risk monitoring and automated response planning</p>
               </div>
             </div>
